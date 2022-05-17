@@ -13,7 +13,6 @@ addMsg.addEventListener("click", function(){
         textArea.value = "";
         console.log(msg)
         let block = tplBlock.cloneNode(true)
-        block.postid = counterPost;
         let msgDisplay = block.querySelector(".msg")
         msgDisplay.innerHTML = msg;
         block.querySelector("#check").addEventListener("click", function(){
@@ -26,8 +25,6 @@ addMsg.addEventListener("click", function(){
             }
         })
         block.querySelector("#deleteDiv").addEventListener("click", function(){
-            //document.querySelectorall(".block").remove(this)
-            //tplBlock.parentNode.appendchild(block)
             this.parentNode.remove()
         })
     
